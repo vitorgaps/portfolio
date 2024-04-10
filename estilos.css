@@ -1,24 +1,30 @@
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
-    color: white;
+    color: #0A1128;
 }
 
 p {
     display: flex;
-    padding: 2rem 2rem;
     text-align: center;
     align-content: center;
-    color: black;
+    color: #0A1128;
 }
 
-#sobre img {
-    size: 2rem;
-    max-width: 10rem;
-    max-height: 10rem;
-    margin-top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
+#home button{
+    width: 50%;
+    height: 3rem;
+    background-color: transparent;
+    color: #034078;
+    border-radius: 30px;
+    border-style: double;
+    border-color: #034078;
+    transition-duration: 0.4s;
+}
+
+#home button:hover{
+    background-color:  #034078;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 h1 {
@@ -33,7 +39,6 @@ h1 {
 
 h2 {
     text-align: center;
-    max-width: 90%;
     max-height: 90%;
     margin-top: 90px;
     margin-left: auto;
@@ -61,13 +66,13 @@ h4 {
     margin-bottom: 20px;
 }
 
-.foto-home {
+.foto-sobre {
     padding: 0px;
-    border-radius: 30%;
-    box-shadow: 0 0 1em black;
+    border-radius: 5%;
+    max-width: 20rem;
 }
 
-.bloco img {
+.bloco-img {
     max-width: 50px;
     max-height: 50px;
 }
@@ -75,7 +80,7 @@ h4 {
 .rolagem {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 100vh;    
     overflow: hidden;
 }
 
@@ -95,6 +100,7 @@ h4 {
     height: 50px;
     position: fixed;
     display: flex;
+    background-color: #F2EDEF;
 }
 
 .links label {
@@ -123,8 +129,8 @@ h4 {
 }
 
 #home {
-    background-color: #23374d;
-    background-image: url(imagens/Commit.png);
+    background-color: #F9F4F5;
+    /* background-image: url(imagens/Commit.png); */
     background-size: 20em;
     background-repeat: no-repeat;
     background-position: center;
@@ -132,21 +138,58 @@ h4 {
 }
 
 #sobre {
-    background-color: #315b96 ;
+    background-color: #F9F4F5;
 }
 
 #sobre p {
-    padding: 0px 130px;
+    font-size: larger;
+    text-align: justify;
+    color: #0A1128;
+    padding: 2rem 0 0 2rem;
+}
+
+.sobre-conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4rem;
+}
+
+.sobre-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: #F2EDEF; 
+    border-radius: 10px; 
+    padding: 6px;
+}
+
+.sobre-container{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    padding-left: 2rem; 
+    text-align: center;
+}
+
+.experiencias{
+    padding:2rem; 
+    display: grid; 
+    grid-template-columns: auto auto auto auto auto; 
+    grid-gap: 1rem; 
+    min-height: 400px; 
+    background-color: #F2EDEF; 
+    border-radius: 2rem;
 }
 
 #Conhecimentos {
     display: grid;
-    background-color: #3e64ff;
+    background-color: #F9F4F5;
 }
 
 #formacao {
     display: grid;
-    background-color: #1089ff;
+    background-color: #F9F4F5;
 }
 
 #formacao p {
@@ -156,7 +199,7 @@ h4 {
 
 #contatos {
     display: grid;
-    background-color: #5edfff;
+    background-color: #F9F4F5;
 }
 
 #contatos img {
@@ -171,10 +214,44 @@ h4 {
     margin-top: -200vh;
 }
 
-#rd_formacao:checked~.sections {
+#rd_contatos:checked~.sections {
     margin-top: -300vh;
 }
 
-#rd_contatos:checked~.sections {
-    margin-top: -400vh;
+@media (max-width: 920px) {    
+    .sobre-conteudo{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 1rem;
+    }
+    #sobre p{
+        text-align: justify;
+        color: #0A1128;
+        padding: 2rem 0 0 2rem;
+        font-size: small;
+    }
+    .foto-sobre{
+        padding: 0px;
+        border-radius: 5%;
+        height: 10rem;
+    }
+
+    .sobre-card{
+        font-size: smaller;
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .experiencias{
+        padding:2rem; 
+        display: grid; 
+        grid-template-columns: auto auto auto; 
+        grid-gap: 1rem; 
+        min-height: 400px; 
+        background-color: #F2EDEF; 
+        border-radius: 2rem;
+    }
 }
