@@ -229,7 +229,7 @@ h4 {
     #sobre p{
         text-align: justify;
         color: #0A1128;
-        padding: 2rem 0 0 2rem;
+        padding: 0;
         font-size: small;
     }
     .foto-sobre{
