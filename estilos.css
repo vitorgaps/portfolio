@@ -254,4 +254,12 @@ h4 {
         background-color: #F2EDEF; 
         border-radius: 2rem;
     }
+
+    #home h2{
+        font-size: 6vw!important;
+    }
+
+    #home button{
+        width: 50vw;
+    }
 }
